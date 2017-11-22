@@ -8,11 +8,10 @@ $headerHeight: 149px;
 $headerHeightMed: 64px;
 
 #content {
-  margin-top: 252px;
+  margin-top: $headerHeight;
   @include ptb(6%,3%);
-  @include breakpoint(lg) { // 890 - LARGE =================================
-    @include ptb(100px,4%);
-  }//large
+  @extend %dtrans;
+  .scrolled & { margin-top: $headerHeightMed; }
 }//content
 
 .outer-wrap {
