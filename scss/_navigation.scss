@@ -1,19 +1,26 @@
 // ============================================================
 //  HEADER NAV
 // ============================================================
+%nav-hover { border-color: lighten($primary,40%); }
 nav#menu {
-  align-self: flex-end;
   padding: 10px 0;
   ul {
     display: flex;
+    justify-content: center;
     @extend %ul-zero;
   }//ul
-  li { margin-left: 20px; }
+  li {
+    margin: 0 20px;
+    &.current-menu-item a { @extend %nav-hover; }
+  }//li
   a {
-    font-size: 0.9em;
+    @include ptb(10px,5px);
     font-weight: 600;
-    text-transform: uppercase;
+    color: $taupe;
     letter-spacing: 1px;
+    border-bottom: 2px solid $white;
+    @extend %dtransfast;
+    &:hover { @extend %nav-hover; }
   }//a
 }//nav#menu
 

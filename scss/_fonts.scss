@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i|Oswald:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i|Oswald:300|Covered+By+Your+Grace');
 
 $sans:'Montserrat',sans-serif;
 // 400(i), 600(i)
 $headline:'Oswald',sans-serif;
 // 300
+$cursive:'Covered By Your Grace',cursive;
+
 $iconfont: "Ionicons";
 .ion:before { font-family: $iconfont !important; }
 // http://ionicons.com/

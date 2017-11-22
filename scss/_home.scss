@@ -1,0 +1,61 @@
+.home {
+  #content { padding: 0; }
+  .inner-wrap { background: none; }
+  // ============================================================
+  //  LATEST FEATURED POST
+  // ============================================================
+  .featured-post {
+    padding: 10% 0;
+    background: url(../images/pixabay-typewriter-1227357_1920.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    .outer-wrap {
+      padding: 4% 0;
+      background: rgba(255,255,255,0.95);
+    }//outer-wrap
+    .inner-wrap { @extend %inner-narrow; }
+  }//featured-post
+  // ============================================================
+  //  OLDER POSTS
+  // ============================================================
+  .recent-posts {
+    // background: url(../images/pixabay-elbe-2960115_1920.jpg) no-repeat 50% 50%;
+    .outer-wrap {
+      padding: 8% 0;
+      background: lighten($primary,40%);
+    }//outer-wrap
+    .inner-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }//inner-wrap
+    a.post {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 31%;
+      margin: 2% 0;
+      background: $white;
+      &:hover {
+        .title {
+          background: lighten($primary,20%);
+          color: $white;
+        }//title
+      }//hover
+    }//post
+    .image {
+      display: block;
+      img { @extend %fluid-img; }
+    }//image
+    .title {
+      display: flex;
+      align-self: stretch;
+      display: block;
+      height: 100%;
+      padding: 8% 10%;
+      font-family: $headline;
+      font-size: 1.1em;
+      line-height: 1.4;
+      letter-spacing: 1px;
+    }//a.title
+  }//recent-posts
+}//home

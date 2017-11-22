@@ -66,6 +66,12 @@
 
 .ul-zero { @extend %ul-zero; }
 
+%fluid-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}//%fluid-img
+
 %dtrans { transition: all 0.3s ease-in-out; }
 %dtransfast { transition: all 0.15s ease-in-out; }
 %dtransslow { transition: all 0.5s ease-in-out; }

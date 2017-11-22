@@ -12,7 +12,7 @@
       <div class="outer-wrap">
         <div class="inner-wrap">
           <section id="branding">
-            <a href="/" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo-ph-01.png"></a>
+            <a href="/" class="logo">Life Composing<span>life lessons and the art of writing</span></a>
           </section>
           <nav id="menu" role="navigation">
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
