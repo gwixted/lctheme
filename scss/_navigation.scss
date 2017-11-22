@@ -3,14 +3,18 @@
 // ============================================================
 %nav-hover { border-color: lighten($primary,40%); }
 nav#menu {
-  padding: 10px 0;
+  flex: 0 0 40%;
+  align-self: flex-end;
+  @include ptb(0,20px);
+  opacity: 1;
+  @extend %dtrans;
   ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     @extend %ul-zero;
   }//ul
   li {
-    margin: 0 20px;
+    margin-left: 40px;
     &.current-menu-item a { @extend %nav-hover; }
   }//li
   a {
@@ -22,6 +26,7 @@ nav#menu {
     @extend %dtransfast;
     &:hover { @extend %nav-hover; }
   }//a
+  .scrolled & { display: none; }
 }//nav#menu
 
 // ============================================================
@@ -30,17 +35,17 @@ nav#menu {
 #mobile-menu {
   position: fixed;
   right: -400px;
-  top: 70px;
+  top: 64px;
   width: 400px;
   max-width: 100%;
   height: 100%;
   padding: 20px 20px 60px;
-  background: #eee;
+  background: lighten($primary,40%);
   overflow: auto;
   opacity: 0;
   @extend %dtransfast;
   z-index: 1200;
-  .logged-in & { top: 102px; }
+  .logged-in & { top: 96px; }
   &.vis {
     right: 0;
     opacity: 1;

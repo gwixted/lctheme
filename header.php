@@ -11,9 +11,7 @@
     <header id="header" role="banner">
       <div class="outer-wrap">
         <div class="inner-wrap">
-          <section id="branding">
-            <a href="/" class="logo">Life Composing<span>life lessons and the art of writing</span></a>
-          </section>
+          <a href="/" class="logo">Life Composing<span>life lessons and the art of writing</span></a>
           <nav id="menu" role="navigation">
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
           </nav>
