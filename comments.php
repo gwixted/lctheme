@@ -1,4 +1,7 @@
 <?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>
+<div class="comment-form-wrap">
+  <?php if ( comments_open() ) comment_form(); ?>
+</div>
 <section id="comments">
 <?php
 if ( have_comments() ) :
@@ -36,6 +39,5 @@ $ping_count = count( $comments_by_type['pings'] );
 <?php
 endif;
 endif;
-if ( comments_open() ) comment_form();
 ?>
 </section>

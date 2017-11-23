@@ -1,3 +1,4 @@
+.ftpconfig
 .env
 node_modules
 -work.php

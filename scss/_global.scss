@@ -1,4 +1,7 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  text-size-adjust: none;
+}
 
 body {
   &.vis { overflow: hidden; }
@@ -44,7 +47,8 @@ header#header {
   left: 0;
   width: 100%;
   background: $white;
-  border-bottom: 1px solid #f5f5f5;
+  border-top: 4px solid lighten($primary,20%);
+  border-bottom: 1px solid lighten($primary,45%);
   z-index: 2000;
   @extend %dtrans;
   * { @extend %dtrans; }
@@ -54,23 +58,26 @@ header#header {
     display: flex;
     justify-content: space-between;
   }//inner-wrap
-  a.logo {
+  h1.branding {
     flex: 0 0 60%;
     @include ptb(30px,30px);
-    font-family: $cursive;
-    font-size: 3.8em;
-    color: #333;
     line-height: 1.0;
-    span {
-      display: block;
+    a.logo {
+      padding: 0;
+      font-family: $cursive;
+      font-size: 3.8rem;
+      color: #333;
+      line-height: 1.0;
+    }//a.logo
+    .description {
       padding-top: 15px;
       font-family: $sans;
       font-size: 0.9rem;
       letter-spacing: 2px;
       color: lighten($primary,20%);
       opacity: 1;
-    }//span
-  }//a.logo
+    }//.description
+  }//branding
   // nav#menu in _navigation.scss
   .mobile-trigger {
     display: none;
@@ -89,15 +96,16 @@ header#header {
   //  SCROLLED
   // ============================================================
   .scrolled & {
-    a.logo {
-      @include ptb(10px,5px);
-      font-size: 2.4em;
-      span {
+    h1.branding {
+      @include ptb(10px,0);
+      a.logo { font-size: 2.4rem; }
+      .description {
         padding-top: 0;
         font-size: 0.001rem;
         opacity: 0;
-      }//span
-    }//a.logo
+      }//.description
+    }//branding
+
     .mobile-trigger { display: flex; }
   }//scrolled
   @include breakpoint(xxlg) { // 1200 - XXLARGE =================================
@@ -130,6 +138,9 @@ header#header {
 //  FOOTER
 // ============================================================
 footer#footer {
+  padding: 4% 0 1%;
+  border-top: 1px solid lighten($primary,45%);
+  border-bottom: 4px solid lighten($primary,20%);
   ul.sn-icons {
     display: flex;
     justify-content: flex-end;
@@ -158,7 +169,7 @@ footer#footer {
   @extend %dtransfast;
   z-index: -1;
   &.vis {
-    opacity: 0.98;
+    opacity: 0.95;
     z-index: 1000;
   }//vis
 }//overlay

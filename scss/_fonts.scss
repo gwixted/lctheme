@@ -9,3 +9,7 @@ $cursive:'Covered By Your Grace',cursive;
 $iconfont: "Ionicons";
 .ion:before { font-family: $iconfont !important; }
 // http://ionicons.com/
+
+.sans { font-family:$sans; }
+.headline { font-family:$headline; }
+.cursive { font-family: $cursive; }

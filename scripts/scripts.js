@@ -34,6 +34,11 @@
         }
       }
 
+      // RANDOMIZE HOME HERO BACKGROUND IMAGE ==================
+      var bgArray = ['bg-01','bg-02','bg-03'];
+      var randomBg = bgArray[Math.floor(Math.random()*bgArray.length)];
+      $('.home .featured-post').addClass(randomBg);
+
       // LOAD EVENT ============================
   		wndw.on('load',function(){
         addScroll();
@@ -46,7 +51,7 @@
 
   		// RESIZE EVENT ============================
   		wndw.on('resize',function(){
-
+        addScroll();
   		});
 
     });

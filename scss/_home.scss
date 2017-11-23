@@ -6,22 +6,39 @@
   // ============================================================
   .featured-post {
     padding: 10% 0;
-    background: url(../images/pixabay-typewriter-1227357_1920.jpg) no-repeat 50% 50%;
+    background-color: $primary;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     background-size: cover;
+    &.bg-01 { background-image: url(../images/pixabay-typewriter-1227357_1920.jpg); }
+    &.bg-02 { background-image: url(../images/pixabay-typewriter-1245894_1920.jpg); }
+    &.bg-03 { background-image: url(../images/pixabay-wild-865292_1280.jpg); }
     .outer-wrap {
       padding: 4% 0;
       background: rgba(255,255,255,0.95);
     }//outer-wrap
     .inner-wrap { @extend %inner-narrow; }
+
+    @include breakpoint(med) { // 768 - MEDIUM =================================
+      .outer-wrap { padding: 6% 0; }
+    }//medium
+
+    @include breakpoint(small) { //   667 - SMALL ================================
+      .outer-wrap { padding: 8% 0; }
+    }//small
+
+    @include breakpoint(xsmall) { // 480 - XSMALL ================================
+
+    }//xsmall
   }//featured-post
   // ============================================================
   //  OLDER POSTS
   // ============================================================
   .recent-posts {
-    // background: url(../images/pixabay-elbe-2960115_1920.jpg) no-repeat 50% 50%;
     .outer-wrap {
       padding: 8% 0;
       background: lighten($primary,40%);
+      // background-image: linear-gradient(lighten($primary,40%), lighten($primary,30%));
     }//outer-wrap
     .inner-wrap {
       display: flex;
@@ -33,7 +50,7 @@
       display: flex;
       flex-direction: column;
       flex: 0 0 31%;
-      margin: 2% 0;
+      margin: 1.8vw 0;
       background: $white;
       &:hover {
         .title {
@@ -51,11 +68,24 @@
       align-self: stretch;
       display: block;
       height: 100%;
-      padding: 8% 10%;
       font-family: $headline;
       font-size: 1.1em;
       line-height: 1.4;
       letter-spacing: 1px;
+      div { padding: 8% 10%; }
     }//a.title
+
+    @include breakpoint(med) { // 768 - MEDIUM =================================
+      a.post { flex: 0 0 48%; }
+    }//medium
+
+    @include breakpoint(small) { // 667 - SMALL ================================
+
+    }//small
+
+    @include breakpoint(xsmall) { // 480 - XSMALL ================================
+      .inner-wrap { display: block; }
+      a.post { margin-bottom: 30px; }
+    }//xsmall
   }//recent-posts
 }//home

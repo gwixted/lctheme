@@ -1,10 +1,44 @@
+.comments { padding-top: 20px; }
+
+// ============================================================
+//  COMMENT FORM
+// ============================================================
+#commentform {
+  p.comment-form-comment { margin-bottom: 0; }
+  label {
+    display: block;
+    font-family: $headline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $primary;
+  }//label
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lighten($primary,20%);
+    background: lighten($primary,45%);
+    color: darken($primary,20%);
+    &:focus {
+      background: lighten($primary,50%);
+      outline: none;
+    }//focus
+  }//textarea
+}//#commentform
+
+// ============================================================
+//  COMMENTS LIST
+// ============================================================
 #comments-list {
   ul { @extend %ul-zero; }
   li {
     margin-bottom: 10px;
     padding: 20px;
-    background: rgba(0,0,0,0.05);
+    background: rgba(131,127,109,0.08);
     font-size: 0.95rem;
-    li { padding: 14px; }
+    li {
+      padding: 14px;
+      background: rgba(131,127,109,0.04);
+    }
   }//li
 }//comments-list

@@ -11,7 +11,10 @@
     <header id="header" role="banner">
       <div class="outer-wrap">
         <div class="inner-wrap">
-          <a href="/" class="logo">Life Composing<span>life lessons and the art of writing</span></a>
+          <h1 class="branding">
+            <a href="<?php echo site_url(); ?>" class="logo">Life Composing</a>
+            <div class="description"><?php echo get_bloginfo('description'); ?></div>
+          </h1>
           <nav id="menu" role="navigation">
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
           </nav>
