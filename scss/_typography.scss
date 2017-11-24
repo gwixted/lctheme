@@ -40,6 +40,10 @@ h3 {
 a {
   color: $secondary;
   text-decoration: none;
+  &.more-link {
+    @extend .btn;
+    @extend .xsm;
+  }
 }
 
 p {

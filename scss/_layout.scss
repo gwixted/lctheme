@@ -27,3 +27,47 @@
 
   }//xsmall
 }//layout-sidebar-right
+
+// ============================================================
+//  ARTICLE ROWS - (tag, category archives)
+// ============================================================
+.article-rows {
+  article {
+    padding: 4% 0;
+    border-bottom: 1px solid lighten($primary,40%);
+    &:last-child { border: none; }
+  }//article-rows
+  &.reduced {
+    article { padding: 2% 0; }
+    h2.entry-title { font-size: 1.6em; }
+    .entry-meta { font-size: 1.0em; }
+  }//reduced
+  @include breakpoint(xxlg) { // 1200 - XXLARGE =================================
+
+  }//xxlarge
+  @include breakpoint(xlg) { // 1024 - XLARGE =================================
+
+  }//xlarge
+
+  @include breakpoint(lg) { // 890 - LARGE =================================
+
+  }//large
+
+  @include breakpoint(med) { // 768 - MEDIUM =================================
+    &.reduced {
+      h2.entry-title { font-size: 1.4em; }
+      .entry-meta { font-size: 0.9em; }
+    }//reduced
+  }//medium
+
+  @include breakpoint(small) { // 667 - SMALL ================================
+    &.reduced {
+      h2.entry-title { font-size: 1.2em; }
+      .entry-meta { font-size: 0.8em; }
+    }//reduced
+  }//small
+
+  @include breakpoint(xsmall) { // 480 - XSMALL ================================
+    article { padding: 6% 0; }
+  }//xsmall
+}//article-rows
