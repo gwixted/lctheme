@@ -4,6 +4,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

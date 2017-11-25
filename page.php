@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section id="content" role="main">
   <div class="outer-wrap">
-    <div class="inner-wrap"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="inner-wrap inner-narrow"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <header class="header">
             <h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
@@ -16,5 +16,4 @@
       <?php endwhile; endif; ?></div>
   </div>
 </section>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

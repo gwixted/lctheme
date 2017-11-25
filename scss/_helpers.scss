@@ -73,6 +73,7 @@
   max-width: 100%;
   height: auto;
 }//%fluid-img
+.fluid-img { @extend %fluid-img; }
 
 %dtrans { transition: all 0.3s ease-in-out; }
 %dtransfast { transition: all 0.15s ease-in-out; }

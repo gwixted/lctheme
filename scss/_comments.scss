@@ -6,24 +6,9 @@
 #commentform {
   p.comment-form-comment { margin-bottom: 0; }
   label {
-    display: block;
-    font-family: $headline;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: $primary;
+    
   }//label
-  textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid lighten($primary,20%);
-    background: lighten($primary,45%);
-    color: darken($primary,20%);
-    &:focus {
-      background: lighten($primary,50%);
-      outline: none;
-    }//focus
-  }//textarea
+  textarea { padding: 10px; }
 }//#commentform
 
 // ============================================================

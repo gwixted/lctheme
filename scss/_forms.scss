@@ -1,8 +1,43 @@
+// ============================================================
+//  FORM DEFAULTS
+// ============================================================
+%form-item-defaults {
+  margin-bottom: 2%;
+}//%form-item-defaults
+
+%label-defaults {
+  display: block;
+  font-family: $headline;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $primary;
+}//%label-defaults
+
+%input-defaults {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lighten($primary,20%);
+  background: lighten($primary,45%);
+  color: darken($primary,20%);
+  &:focus {
+    background: lighten($primary,50%);
+    outline: none;
+  }//focus
+}///%input-defaults
+
+.form-item {
+  @extend %form-item-defaults;
+  & + p { margin: 0; } // for honeypot
+}//form-item
+
+label,
+.label { @extend %label-defaults; }
+
 form {
   input[type=text],
   input[type=email],
-  input[type=submit],
   textarea {
-    // appearance: none;
+    @extend %input-defaults;
   }//inputs
 }//form
