@@ -1,3 +1,15 @@
 .single-post {
   .post-header { margin-bottom: 10px; }
+  .image {
+    .attrib {
+      @extend .small;
+      text-align: right;
+      color: lighten($primary,20%);
+      a {
+        color: lighten($primary,15%);
+        text-decoration: underline;
+        &:hover { text-decoration: none; }
+      }
+    }//attrib
+  }//image
 }//single-post

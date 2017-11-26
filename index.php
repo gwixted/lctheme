@@ -28,10 +28,11 @@
               )
             );
             while (have_posts()) : the_post();
-            $post_image = get_field('post_image');
           ?>
           <a href="<?php the_permalink(); ?>" class="post secondary">
-            <div class="image"><img src="<?php echo $post_image['sizes']['home-preview']; ?>"></div>
+            <div class="image">
+              <?php the_post_thumbnail( $size = 'home-preview' ); ?>
+            </div>
             <div class="title"><div><?php the_title(); ?></div></div>
           </a>
           <?php endwhile; ?>
