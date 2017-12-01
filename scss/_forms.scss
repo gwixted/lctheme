@@ -40,4 +40,24 @@ form {
   textarea {
     @extend %input-defaults;
   }//inputs
+  input[type=submit] {
+    @extend .btn;
+    @extend .sm;
+  }
 }//form
+
+.privacy { color: lighten($primary,20%); }
+
+// ============================================================
+//  SUBSCRIBE FORM
+// ============================================================
+.subscribe-form {
+  .outer-wrap {
+    padding: 4%;
+  }//outer-wrap
+  .inner-wrap {
+    width: 480px;
+    max-width: 96%;
+    margin: auto;
+  }//inner-wrap
+}//subscribe-form

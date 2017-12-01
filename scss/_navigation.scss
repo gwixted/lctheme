@@ -19,7 +19,6 @@ nav#menu {
   }//li
   a {
     @include ptb(10px,5px);
-    font-weight: 600;
     color: $taupe;
     letter-spacing: 1px;
     border-bottom: 2px solid $white;

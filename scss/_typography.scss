@@ -2,6 +2,29 @@ body {
   font-family: $sans;
   color: #444;
   line-height: 2.0;
+  @include breakpoint(xxlg) { // 1200 - XXLARGE =================================
+
+  }//xxlarge
+
+  @include breakpoint(xlg) { // 1024 - XLARGE =================================
+
+  }//xlarge
+
+  @include breakpoint(lg) { // 890 - LARGE =================================
+
+  }//large
+
+  @include breakpoint(med) { // 768 - MEDIUM =================================
+
+  }//medium
+
+  @include breakpoint(small) { // 667 - SMALL ================================
+    line-height: 1.8;
+  }//small
+
+  @include breakpoint(xsmall) { // 480 - XSMALL ================================
+
+  }//xsmall
 }//body
 
 h1,h2,h3,h4 {
@@ -68,3 +91,4 @@ em { font-style: italic; }
 strong { font-weight: 600; }
 small,
 .small { font-size: 0.8rem; }
+.larger { font-size: 1.2rem; }

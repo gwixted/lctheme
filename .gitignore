@@ -1,4 +1,5 @@
 .ftpconfig
 .env
+.vscode
 node_modules
 -work.php
